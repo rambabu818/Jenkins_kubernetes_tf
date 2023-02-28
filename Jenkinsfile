@@ -14,6 +14,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh "docker build --pull -t ${IMAGE}:${TAG} ."
+                echo "done"
             }
         }
         stage('Push to dockerhub') {
