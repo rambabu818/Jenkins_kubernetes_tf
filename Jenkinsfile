@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh "docker build --pull -t ${IMAGE}:${TAG} ."
+                sh "docker build -t ${IMAGE}:${TAG} ."
             }
         }
         stage('Push to dockerhub') {
