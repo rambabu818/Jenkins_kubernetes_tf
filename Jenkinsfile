@@ -14,6 +14,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh "docker build -t ${IMAGE}:${TAG} ."
+                echo "Build successfull"
             }
         }
         stage('Push to dockerhub') {
